@@ -8,12 +8,14 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+
   constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  //when button is clicked the button is pushed into the array
   addToDo():void{
-
+      
   }
 }
