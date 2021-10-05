@@ -1,3 +1,31 @@
 <h1>Welcome</h1>
-<button mat-raised-button color="primary" (click)="goToListView()">List View</button>
-<button mat-raised-button color="accent" (click)="goToCardView()">Card View</button>
+
+<div class="todo-form">
+  <form>
+    <!--name-->
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name of To Do Task" name="name">
+    </mat-form-field>
+    <br>
+    <!--date-->
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" name="date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  <br>
+    <!--complete yes or no-->
+    <mat-radio-group aria-label="Complete?">
+      <mat-label>Complete?</mat-label>
+      <mat-radio-button value="yes" name="yes">Yes</mat-radio-button>
+      <mat-radio-button value="no" name="no">No</mat-radio-button>
+    </mat-radio-group>
+  </form>
+
+  <br>
+
+  <button mat-raised-button color="primary" (click)="addToDo()">Add To Do</button>
+
+</div>

@@ -13,14 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //router navigate to go to list view
-  goToListView(): void {
-      this.router.navigateByUrl('/list-view');
-  }
+  addToDo():void{
 
-  //router navigate to go to card view
-  goToCardView(): void {
-      this.router.navigateByUrl('/card-view');
   }
-
 }
